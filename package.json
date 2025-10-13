@@ -1,5 +1,7 @@
 {
   "name": "swstudio",
+    "homepage": "https://gwstudio.app",
+
   "private": true,
   "version": "0.0.0",
   "type": "module",
