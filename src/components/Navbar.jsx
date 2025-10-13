@@ -2,10 +2,12 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navItem = [
-  { name: "Home", section: "Home" },
-  { name: "Contact", section: "Contact" },
   { name: "Apps", section: "Apps" },
-  { name: "Turm", section: "Turm" },
+  { name: "Legal_Documents", section: "Legal_Documents" },
+  { name: "이용약관", section: "Ko_TurmsOfUse" },
+  { name: "개인정보처리방침", section: "Ko_Privacy" },
+  { name: "Contact", section: "Contact" },
+
 ];
 
 const Navbar = ({ setActiveSection }) => {

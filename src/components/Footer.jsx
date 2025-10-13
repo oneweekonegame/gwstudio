@@ -46,8 +46,8 @@ const Footer = () => {
 
 
 <footer className="bg-gray-800 text-gray-200 text-center py-4 mt-auto fixed bottom-0 left-0 right-0">
-      <p className="text-sm">© 2025 My Website. All rights reserved.</p>
-      <p className="text-sm">© 2025 My Website. All rights reserved.</p>
+      <p className="text-sm">Copyright Notice © GW Studio. All rights reserved.</p>
+      <p className="text-sm">상호: 지더블유스튜디오. 대표자: 이건우. 사업자등록번호: 509-56-01105. 주소: 인천광역시 남동구 남동서로 236번길 30, 222-J479호</p>
     </footer>
   );
 };
