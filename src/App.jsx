@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   // 현재 표시할 섹션 상태 (기본: Home)
-  const [activeSection, setActiveSection] = useState("Home");
+ const [activeSection, setActiveSection] = useState("Contact");
 
   // 섹션 렌더링 함수
   const renderSection = () => {
