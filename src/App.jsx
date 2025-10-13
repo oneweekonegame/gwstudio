@@ -1,18 +1,12 @@
+import React from "react";
+import Navbar from "./components/Navbar";
 
-import './App.css'
-import { Header } from './components/Header'
-
-function App() {
-
+const App = () => {
   return (
-    <>
-     <div>
-    <Header />
-
+    <div>
+     <Navbar />
     </div>
-  
-    </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
