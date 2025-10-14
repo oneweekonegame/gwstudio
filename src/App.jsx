@@ -4,12 +4,11 @@ import Footer from "./components/Footer";
 
 const App = () => {
   // 현재 표시할 섹션 상태 (기본: Home)
- const [activeSection, setActiveSection] = useState("Contact");
+  const [activeSection, setActiveSection] = useState("Contact");
 
   // 섹션 렌더링 함수
   const renderSection = () => {
     switch (activeSection) {
-
       case "Apps":
         return (
           <section
@@ -21,146 +20,191 @@ const App = () => {
         );
       case "Legal_Documents":
         return (
-        <section
-  id="legal-docs"
-  class="py-16 bg-gray-100 min-h-screen flex flex-col items-center"
->
-  <div class="container mx-auto px-4">
-    <h1 class="text-5xl font-extrabold text-gray-900 mb-4 text-center">
-      Legal Documents
-    </h1>
-    <p class="text-xl text-gray-600 mb-12 text-center">
-      Please review our Terms of Service and End User License Agreement.
-    </p>
+          <section
+            id="legal-docs"
+            class="py-16 bg-gray-100 min-h-screen flex flex-col items-center"
+          >
+            <div className="container mx-auto px-4 p-4">
+              <h1 className="text-5xl font-extrabold text-gray-900 mb-8 text-center">
+                Legal Documents
+              </h1>
 
-    <div
-      class="bg-white shadow-xl rounded-lg p-8 mb-10 border-t-4 border-indigo-600"
-    >
-      <h2 class="text-3xl font-bold text-indigo-700 mb-6">
-        Terms of Service (or Terms of Use)
-      </h2>
+              {/* 버튼 그룹 */}
+              <div className="flex justify-center gap-4 flex-wrap">
+                <a
+                  href="/privacy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition duration-200"
+                >
+                  View Privacy Policy
+                </a>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        Acceptance of Terms
-      </h3>
-      <p class="text-gray-600 mb-4">
-        These Terms of Service ("Terms") govern your use of the games,
-        applications, websites, and services provided by
-        <strong class="text-indigo-600">GW Studio</strong> (the "Services"). By
-        using the Services, you agree to be bound by these Terms. If you do not
-        agree to these Terms, do not use the Services.
-      </p>
+                <a
+                  href="/terms.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition duration-200"
+                >
+                  View Terms of Service
+                </a>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        Limited License and Intellectual Property
-      </h3>
-      <p class="text-gray-600 mb-4">
-        We grant you a non-exclusive, non-transferable, revocable limited license
-        to access and use the Services for your personal, non-commercial use. All
-        rights, title, and interest in and to the Services (including all
-        intellectual property rights) are and will remain the exclusive property
-        of <strong class="text-indigo-600">GW Studio</strong> and its licensors.
-      </p>
+                {/* <a
+                  href="/eula.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow hover:bg-purple-700 transition duration-200"
+                >
+                  View EULA
+                </a> */}
+              </div>
+            </div>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        User Conduct and Prohibited Activities
-      </h3>
-      <p class="text-gray-600 mb-4">
-        You agree not to use the Services to:
-      </p>
-      <ul class="list-disc list-inside text-gray-600 ml-4 mb-4 space-y-1">
-        <li>Violate any law or regulation.</li>
-        <li>Harass, abuse, or harm another person.</li>
-        <li>
-          Reverse engineer or attempt to extract the source code of the Services.
-        </li>
-        <li>
-          Use cheats, exploits, automation software, bots, or any unauthorized
-          third-party software.
-        </li>
-      </ul>
+            {/* 추가 카드 예시 (Optional) */}
+            <div className="bg-white shadow-2xl rounded-xl p-10 border-l-8 border-green-600 max-w-3xl mx-auto">
+              <div class="bg-white shadow-xl rounded-lg p-8 mb-10 border-t-4 border-indigo-600">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-6">
+                  Terms of Service (or Terms of Use)
+                </h2>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        User Generated Content (UGC)
-      </h3>
-      <p class="text-gray-600 mb-4">
-        You are solely responsible for any content you post, upload, or transmit
-        through the Services ("UGC"). You grant
-        <strong class="text-indigo-600">GW Studio</strong> a worldwide,
-        non-exclusive, perpetual, irrevocable, royalty-free license to use,
-        reproduce, modify, and display your UGC in connection with the Services.
-      </p>
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  Acceptance of Terms
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  These Terms of Service ("Terms") govern your use of the games,
+                  applications, websites, and services provided by
+                  <strong class="text-indigo-600">GW Studio</strong> (the
+                  "Services"). By using the Services, you agree to be bound by
+                  these Terms. If you do not agree to these Terms, do not use
+                  the Services.
+                </p>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        Disclaimer of Warranties and Limitation of Liability
-      </h3>
-      <p class="text-gray-600 mb-4 font-mono p-3 bg-red-50 border border-red-200 rounded">
-        THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE."
-        <strong class="text-indigo-600">GW Studio</strong> DISCLAIMS ALL
-        WARRANTIES, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW,
-        <strong class="text-indigo-600">GW Studio</strong> WILL NOT BE LIABLE
-        FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
-        DAMAGES.
-      </p>
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  Limited License and Intellectual Property
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  We grant you a non-exclusive, non-transferable, revocable
+                  limited license to access and use the Services for your
+                  personal, non-commercial use. All rights, title, and interest
+                  in and to the Services (including all intellectual property
+                  rights) are and will remain the exclusive property of{" "}
+                  <strong class="text-indigo-600">GW Studio</strong> and its
+                  licensors.
+                </p>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        Termination
-      </h3>
-      <p class="text-gray-600 mb-4">
-        We may suspend or terminate your access to the Services at any time, for
-        any reason or no reason, without notice or liability to you.
-      </p>
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  User Conduct and Prohibited Activities
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  You agree not to use the Services to:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 ml-4 mb-4 space-y-1">
+                  <li>Violate any law or regulation.</li>
+                  <li>Harass, abuse, or harm another person.</li>
+                  <li>
+                    Reverse engineer or attempt to extract the source code of
+                    the Services.
+                  </li>
+                  <li>
+                    Use cheats, exploits, automation software, bots, or any
+                    unauthorized third-party software.
+                  </li>
+                </ul>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        Governing Law and Dispute Resolution
-      </h3>
-      <p class="text-gray-600">
-        These Terms shall be governed by the laws of
-        <strong class="text-indigo-600">[Your Jurisdiction, e.g., the Republic of Korea]</strong>. 
-        Any disputes arising under these Terms shall be resolved in the courts of
-        <strong class="text-indigo-600">[Your Jurisdiction]</strong>. 
-        (Note: Many companies include a mandatory arbitration clause here. Consult your lawyer.)
-      </p>
-    </div>
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  User Generated Content (UGC)
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  You are solely responsible for any content you post, upload,
+                  or transmit through the Services ("UGC"). You grant
+                  <strong class="text-indigo-600">GW Studio</strong> a
+                  worldwide, non-exclusive, perpetual, irrevocable, royalty-free
+                  license to use, reproduce, modify, and display your UGC in
+                  connection with the Services.
+                </p>
 
-    <div
-      class="bg-white shadow-xl rounded-lg p-8 border-t-4 border-green-600"
-    >
-      <h2 class="text-3xl font-bold text-green-700 mb-6">
-        End User License Agreement (EULA)
-      </h2>
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  Disclaimer of Warranties and Limitation of Liability
+                </h3>
+                <p class="text-gray-600 mb-4 font-mono p-3 bg-red-50 border border-red-200 rounded">
+                  THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE."
+                  <strong class="text-indigo-600">GW Studio</strong> DISCLAIMS
+                  ALL WARRANTIES, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT
+                  PERMITTED BY LAW,
+                  <strong class="text-indigo-600">GW Studio</strong> WILL NOT BE
+                  LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+                  OR PUNITIVE DAMAGES.
+                </p>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">Introduction</h3>
-      <p class="text-gray-600 mb-4">
-        This EULA is a legal agreement between you and
-        <strong class="text-indigo-600">GW Studio</strong> regarding your use of
-        the <strong class="text-green-600">Ours Games and</strong> software. The
-        game is licensed, not sold, to you.
-      </p>
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  Termination
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  We may suspend or terminate your access to the Services at any
+                  time, for any reason or no reason, without notice or liability
+                  to you.
+                </p>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
-        License Grant
-      </h3>
-      <p class="text-gray-600 mb-4">
-        <strong class="text-indigo-600">GW Studio</strong> grants you a personal,
-        limited, non-transferable, revocable license to install and use the game
-        for your non-commercial entertainment purposes on authorized devices.
-      </p>
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  Governing Law and Dispute Resolution
+                </h3>
+                <p class="text-gray-600">
+                  These Terms shall be governed by the laws of
+                  <strong class="text-indigo-600">
+                    [Your Jurisdiction, e.g., the Republic of Korea]
+                  </strong>
+                  . Any disputes arising under these Terms shall be resolved in
+                  the courts of
+                  <strong class="text-indigo-600">[Your Jurisdiction]</strong>.
+                  (Note: Many companies include a mandatory arbitration clause
+                  here. Consult your lawyer.)
+                </p>
+              </div>
 
-      <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">Ownership</h3>
-      <p class="text-gray-600">
-        All rights and title in and to the game (including, but not limited to,
-        any titles, computer code, themes, objects, characters, names, stories,
-        dialogue, catch phrases, concepts, artwork, animations, sounds, musical
-        compositions, audio-visual effects, operating methods, moral rights,
-        documentation, in-game chat transcripts, character profile information,
-        recordings of games played, and the game clients and server software) are
-        owned by <strong class="text-indigo-600">GW Studio</strong> or its
-        licensors.
-      </p>
-    </div>
-  </div>
-</section>
+              <div class="bg-white shadow-xl rounded-lg p-8 border-t-4 border-green-600">
+                <h2 class="text-3xl font-bold text-green-700 mb-6">
+                  End User License Agreement (EULA)
+                </h2>
+
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  Introduction
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  This EULA is a legal agreement between you and
+                  <strong class="text-indigo-600">GW Studio</strong> regarding
+                  your use of the{" "}
+                  <strong class="text-green-600">Ours Games and</strong>{" "}
+                  software. The game is licensed, not sold, to you.
+                </p>
+
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  License Grant
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  <strong class="text-indigo-600">GW Studio</strong> grants you
+                  a personal, limited, non-transferable, revocable license to
+                  install and use the game for your non-commercial entertainment
+                  purposes on authorized devices.
+                </p>
+
+                <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">
+                  Ownership
+                </h3>
+                <p class="text-gray-600">
+                  All rights and title in and to the game (including, but not
+                  limited to, any titles, computer code, themes, objects,
+                  characters, names, stories, dialogue, catch phrases, concepts,
+                  artwork, animations, sounds, musical compositions,
+                  audio-visual effects, operating methods, moral rights,
+                  documentation, in-game chat transcripts, character profile
+                  information, recordings of games played, and the game clients
+                  and server software) are owned by{" "}
+                  <strong class="text-indigo-600">GW Studio</strong> or its
+                  licensors.
+                </p>
+              </div>
+            </div>
+          </section>
         );
       case "Ko_TurmsOfUse":
         return (
@@ -685,63 +729,65 @@ const App = () => {
       case "Contact":
         return (
           <section
-  id="Contact"
-  class="py-20 bg-gray-900 text-white flex flex-col items-center justify-center"
->
-  <div class="container mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Get In Touch</h1>
-    <p class="text-xl text-gray-400 mb-10">
-      We love hearing from players, press, and potential partners.
-    </p>
+            id="Contact"
+            class="py-20 bg-gray-900 text-white flex flex-col items-center justify-center"
+          >
+            <div class="container mx-auto px-4 text-center">
+              <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                Get In Touch
+              </h1>
+              <p class="text-xl text-gray-400 mb-10">
+                We love hearing from players, press, and potential partners.
+              </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-semibold mb-3 text-indigo-400">
-          Player Support
-        </h3>
-        <p class="text-gray-400 mb-4">
-          Got a bug? Need help with your game?
-        </p>
-        <a
-          href="mailto:support@gwstudio.com"
-          class="text-indigo-300 hover:text-indigo-200 font-medium break-all"
-        >
-          oneweekonegame1@gmail.com
-        </a>
-      </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                  <h3 class="text-2xl font-semibold mb-3 text-indigo-400">
+                    Player Support
+                  </h3>
+                  <p class="text-gray-400 mb-4">
+                    Got a bug? Need help with your game?
+                  </p>
+                  <a
+                    href="mailto:support@gwstudio.com"
+                    class="text-indigo-300 hover:text-indigo-200 font-medium break-all"
+                  >
+                    oneweekonegame1@gmail.com
+                  </a>
+                </div>
 
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-semibold mb-3 text-green-400">
-          Business Inquiries
-        </h3>
-        <p class="text-gray-400 mb-4">
-          For publishing, investment, or partnership proposals.
-        </p>
-        <a
-          href="mailto:bizdev@gwstudio.com"
-          class="text-green-300 hover:text-green-200 font-medium break-all"
-        >
-           oneweekonegame1@gmail.com
-        </a>
-      </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                  <h3 class="text-2xl font-semibold mb-3 text-green-400">
+                    Business Inquiries
+                  </h3>
+                  <p class="text-gray-400 mb-4">
+                    For publishing, investment, or partnership proposals.
+                  </p>
+                  <a
+                    href="mailto:bizdev@gwstudio.com"
+                    class="text-green-300 hover:text-green-200 font-medium break-all"
+                  >
+                    oneweekonegame1@gmail.com
+                  </a>
+                </div>
 
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-semibold mb-3 text-red-400">
-          Press & Media
-        </h3>
-        <p class="text-gray-400 mb-4">
-          Request interviews, assets, or official statements.
-        </p>
-        <a
-          href="mailto:press@gwstudio.com"
-          class="text-red-300 hover:text-red-200 font-medium break-all"
-        >
-          oneweekonegame1@gmail.com
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                  <h3 class="text-2xl font-semibold mb-3 text-red-400">
+                    Press & Media
+                  </h3>
+                  <p class="text-gray-400 mb-4">
+                    Request interviews, assets, or official statements.
+                  </p>
+                  <a
+                    href="mailto:press@gwstudio.com"
+                    class="text-red-300 hover:text-red-200 font-medium break-all"
+                  >
+                    oneweekonegame1@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         );
 
       default:
