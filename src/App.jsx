@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import GameGrid from "./components/GameGrid";
 
 const App = () => {
   // 현재 표시할 섹션 상태 (기본: Home)
-  const [activeSection, setActiveSection] = useState("Contact");
+  const [activeSection, setActiveSection] = useState("Apps");
 
   // 섹션 렌더링 함수
   const renderSection = () => {
@@ -15,9 +16,15 @@ const App = () => {
             id="Apps"
             className="min-h-screen bg-gray-300 flex items-center justify-center"
           >
-            <h1 className="text-4xl font-bold">Apps Section</h1>
+            <div className="w-full max-w-6xl">
+              <h1 className="text-4xl font-bold text-center mb-8">
+                Apps Section - 추천 게임
+              </h1>
+              <GameGrid />
+            </div>
           </section>
         );
+
       case "Legal_Documents":
         return (
           <section
