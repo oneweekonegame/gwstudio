@@ -14,11 +14,11 @@ const App = () => {
         return (
           <section
             id="Apps"
-            className="min-h-screen bg-gray-300 flex items-center justify-center"
+            className="min-h-screen flex items-center justify-center mb-20"
           >
             <div className="w-full max-w-6xl">
               <h1 className="text-4xl font-bold text-center mb-8">
-                Apps Section - 추천 게임
+                추천 게임
               </h1>
               <GameGrid />
             </div>
@@ -29,7 +29,7 @@ const App = () => {
         return (
           <section
             id="legal-docs"
-            class="py-16 bg-gray-100 min-h-screen flex flex-col items-center"
+            class="py-16 min-h-screen flex flex-col items-center"
           >
             <div className="container mx-auto px-4 p-4">
               <h1 className="text-5xl font-extrabold text-gray-900 mb-8 text-center">
@@ -217,7 +217,7 @@ const App = () => {
         return (
           <section
             id="Ko_TurmsOfUse"
-            className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
+            className="min-h-screen py-12 px-4 sm:px-6 lg:px-8"
           >
             <div className="max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
@@ -462,7 +462,7 @@ const App = () => {
         return (
           <section
             id="Ko_Privacy"
-            className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
+            className="min-h-screen py-12 px-4 sm:px-6 lg:px-8"
           >
             <div className="max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
@@ -737,7 +737,7 @@ const App = () => {
         return (
           <section
             id="Contact"
-            class="py-20 bg-gray-900 text-white flex flex-col items-center justify-center"
+            class="py-20 text-black flex flex-col items-center justify-center"
           >
             <div class="container mx-auto px-4 text-center">
               <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
