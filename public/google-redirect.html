@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+
+    <script>
+      // URL 파라미터 (code, state 등) 그대로 가져옴
+      const params = window.location.search;
+
+      // 앱 custom scheme 으로 리다이렉트
+      window.location.href = "com.gwstudio.farmertoking:/oauth2redirect" + params;
+    </script>
+  </body>
+</html>
