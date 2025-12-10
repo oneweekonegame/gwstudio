@@ -1,24 +1,24 @@
 export const games = [
   {
     id: 1,
-    title: 'Infinity LevelUp',
-    description: '궁극의 핵 앤 슬래시 모험! 무한한 잠재력을 발휘하세요! 인피니티 레벨 업에서 평범한 모험가에서 우주의 정복자로 변신하세요. 스릴 넘치는 핵 앤 슬래시 액션에 뛰어들어 수많은 몬스터를 물리치고 강력한 보스를 처치하세요. 무한 레벨 업하고, 장비를 업그레이드하고, 강력한 스킬을 해제하여 궁극의 성장 여정을 경험하세요.',
-    image: 'https://play-lh.googleusercontent.com/JWhlgO29isnQHbwRdtQ6VgdfJ-PykwyRfF51qvVi-zByxwr4EHA2UPJimuTT7zKkDkA4jL2bu34YBiQOa86EIA=w1052-h592-rw', // 실제 플레이 스토어 이미지 URL (플레이스홀더)
-    playStoreLink: 'https://play.google.com/store/apps/details?id=com.solounicon.infinitylevelup',
-    category: '추천, 신규',
+    title: 'Heros Arena',
+    description: 'Jump into the vast world commanding more than 100 individual heroes, each with their own unique skills and growth potential.',
+    image: 'https://play-lh.googleusercontent.com/suEJmGLxvFtc-BpPGUXnkqOB4XFk9Ek97vTGw_ElKCwqQAJnoRHaAzg67mOVP0fpJROORckmJSL-xyM5q9f6cw=s96-rw', // 실제 플레이 스토어 이미지 URL (플레이스홀더)
+    playStoreLink: 'https://play.google.com/store/apps/details?id=com.gwstudio.demonnight',
+    category: 'Recommend, New',
     platform: ['Android'],
-    genre: '핵앤슬레시',
+    genre: 'Action RPG',
     video: 'youtube-link' // 유튜브 링크 (옵션)
   },
   {
     id: 2,
-    title: '해골 삼국지',
-    description: '곧 출시 예정.',
+    title: 'Survival in hell',
+    description: 'Coming Soon.',
     image: '#',
     playStoreLink: '#',
-    category: '추천',
+    category: 'Recommend',
     platform: ['Android'],
-    genre: '케주얼, 전략'
+    genre: 'Casual, Action'
   },
 //   {
 //     id: 3,

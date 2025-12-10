@@ -18,7 +18,7 @@ const App = () => {
           >
             <div className="w-full max-w-6xl">
               <h1 className="text-4xl font-bold text-center mb-8">
-                추천 게임
+                Mobile Games
               </h1>
               <GameGrid />
             </div>
@@ -733,6 +733,9 @@ const App = () => {
           </section>
         );
 
+
+
+        
       case "Contact":
         return (
           <section

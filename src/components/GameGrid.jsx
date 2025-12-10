@@ -6,7 +6,7 @@ Modal.setAppElement('#root'); // 모달 액세서빌리티
 
 const GameGrid = () => {
 const [selectedGame, setSelectedGame] = useState(null); // 모달용
-  const [filter, setFilter] = useState({ category: '추천', genre: '', platform: '' }); // 필터 상태
+  const [filter, setFilter] = useState({ category: 'Recommend', genre: '', platform: '' }); // 필터 상태
   const [searchTerm, setSearchTerm] = useState(''); // 검색 상태
 
   // 필터링된 게임
@@ -21,7 +21,7 @@ const [selectedGame, setSelectedGame] = useState(null); // 모달용
     <div className="p-8">
       {/* 상단 탭: 추천/신규 */}
       <div className="flex justify-center mb-8 space-x-4">
-        {['추천', '신규', '전체'].map(cat => (
+        {['Recommend', 'New', 'All'].map(cat => (
           <button
             key={cat}
             onClick={() => setFilter({ ...filter, category: cat })}
@@ -36,7 +36,7 @@ const [selectedGame, setSelectedGame] = useState(null); // 모달용
       <div className="flex flex-col md:flex-row gap-4 mb-8">
         <input
           type="text"
-          placeholder="게임명 검색"
+          placeholder="Search"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="flex-1 p-2 border rounded"
@@ -46,11 +46,11 @@ const [selectedGame, setSelectedGame] = useState(null); // 모달용
           onChange={(e) => setFilter({ ...filter, genre: e.target.value })}
           className="p-2 border rounded"
         >
-          <option value="">전체 장르</option>
+          <option value="">All Genre</option>
           <option value="RPG">RPG</option>
-          <option value="스포츠">스포츠</option>
+          <option value="스포츠">Sports</option>
           <option value="FPS">FPS</option>
-          <option value="액션 RPG">액션 RPG</option>
+          <option value="액션 RPG">Action RPG</option>
           {/* 더 추가 */}
         </select>
         <select
@@ -58,7 +58,7 @@ const [selectedGame, setSelectedGame] = useState(null); // 모달용
           onChange={(e) => setFilter({ ...filter, platform: e.target.value })}
           className="p-2 border rounded"
         >
-          <option value="">전체 플랫폼</option>
+          <option value="">All Platform</option>
           <option value="Android">Android</option>
           <option value="iOS">iOS</option>
         </select>
@@ -83,7 +83,7 @@ const [selectedGame, setSelectedGame] = useState(null); // 모달용
               />
               {game.isComingSoon && (
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
-                  출시 예정
+                  Comming Soon
                 </span>
               )}
             </div>
@@ -106,16 +106,16 @@ const [selectedGame, setSelectedGame] = useState(null); // 모달용
           <>
             <h2 className="text-2xl font-bold mb-4">{selectedGame.title}</h2>
             <p className="mb-4">{selectedGame.description}</p>
-            <p className="text-sm text-gray-600 mb-4">장르: {selectedGame.genre} | 플랫폼: {selectedGame.platform.join(', ')}</p>
+            <p className="text-sm text-gray-600 mb-4">Genre: {selectedGame.genre} | Platform: {selectedGame.platform.join(', ')}</p>
             <a
               href={selectedGame.playStoreLink}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
             >
-              Google Play 스토어 열기
+              Google Play Open
             </a>
-            <button onClick={() => setSelectedGame(null)} className="ml-4 px-4 py-2 bg-gray-300 rounded">닫기</button>
+            <button onClick={() => setSelectedGame(null)} className="ml-4 px-4 py-2 bg-gray-300 rounded">Close</button>
           </>
         )}
       </Modal>
