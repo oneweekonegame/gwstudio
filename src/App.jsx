@@ -762,7 +762,7 @@ const App = () => {
                     href="mailto:support@gwstudio.com"
                     class="text-indigo-300 hover:text-indigo-200 font-medium break-all"
                   >
-                    oneweekonegame1@gmail.com
+                    gwstudio599@gmail.com
                   </a>
                 </div>
 
@@ -777,7 +777,7 @@ const App = () => {
                     href="mailto:bizdev@gwstudio.com"
                     class="text-green-300 hover:text-green-200 font-medium break-all"
                   >
-                    oneweekonegame1@gmail.com
+                    gwstudio599@gmail.com
                   </a>
                 </div>
 
@@ -792,7 +792,7 @@ const App = () => {
                     href="mailto:press@gwstudio.com"
                     class="text-red-300 hover:text-red-200 font-medium break-all"
                   >
-                    oneweekonegame1@gmail.com
+                    gwstudio599@gmail.com
                   </a>
                 </div>
               </div>
