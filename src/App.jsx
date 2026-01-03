@@ -213,7 +213,9 @@ const App = () => {
             </div>
           </section>
         );
-      case "Ko_TurmsOfUse":
+    
+    
+        case "Ko_TurmsOfUse":
         return (
           <section
             id="Ko_TurmsOfUse"

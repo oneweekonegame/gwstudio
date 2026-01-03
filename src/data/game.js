@@ -1,15 +1,15 @@
 export const games = [
-  {
-    id: 1,
-    title: 'Heros Arena',
-    description: 'Jump into the vast world commanding more than 100 individual heroes, each with their own unique skills and growth potential.',
-    image: 'https://play-lh.googleusercontent.com/suEJmGLxvFtc-BpPGUXnkqOB4XFk9Ek97vTGw_ElKCwqQAJnoRHaAzg67mOVP0fpJROORckmJSL-xyM5q9f6cw=s96-rw', // 실제 플레이 스토어 이미지 URL (플레이스홀더)
-    playStoreLink: 'https://play.google.com/store/apps/details?id=com.gwstudio.demonnight',
-    category: 'Recommend, New',
-    platform: ['Android'],
-    genre: 'Action RPG',
-    video: 'youtube-link' // 유튜브 링크 (옵션)
-  },
+  // {
+  //   id: 1,
+  //   title: 'Heros Arena',
+  //   description: 'Jump into the vast world commanding more than 100 individual heroes, each with their own unique skills and growth potential.',
+  //   image: 'https://play-lh.googleusercontent.com/suEJmGLxvFtc-BpPGUXnkqOB4XFk9Ek97vTGw_ElKCwqQAJnoRHaAzg67mOVP0fpJROORckmJSL-xyM5q9f6cw=s96-rw', // 실제 플레이 스토어 이미지 URL (플레이스홀더)
+  //   playStoreLink: 'https://play.google.com/store/apps/details?id=com.gwstudio.demonnight',
+  //   category: 'Recommend, New',
+  //   platform: ['Android'],
+  //   genre: 'Action RPG',
+  //   video: 'youtube-link' // 유튜브 링크 (옵션)
+  // },
   {
     id: 2,
     title: 'Survival in hell',
